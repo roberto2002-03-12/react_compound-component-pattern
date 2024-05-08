@@ -4,7 +4,7 @@ import { ButtonIncrease } from './ButtonIncrease';
 import { ProductImage } from './ProductImage';
 import { ProductTitle } from './ProductTitle';
 
-import { ProductCardHOCProps } from '../interfaces/interfaces';
+import { ProductCardHOCProps } from '../interfaces/components-props.interfaces';
 
 export { ButtonIncrease } from './ButtonIncrease';
 export { ProductImage } from './ProductImage';

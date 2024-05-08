@@ -2,8 +2,7 @@ import { createContext } from 'react';
 import { useProduct } from '../hooks/useProduct';
 // import { ButtonIncrease, ProductImage, ProductTitle } from './'
 import styles from '../styles/styles.module.css';
-import { ProductContextProps, ProductCardProps } from '../interfaces/interfaces';
-
+import { ProductContextProps, ProductCardProps } from '../interfaces';
 
 export const ProductContext = createContext({} as ProductContextProps);
 const { Provider } = ProductContext;
@@ -13,7 +12,7 @@ const { Provider } = ProductContext;
 //   incrisedBy: (value: number) => void;
 // }
 
-export const ProductCard = ({ children, product }: ProductCardProps) => {
+export const ProductCard = ({ children, product, className, style }: ProductCardProps) => {
   // const [counter, setCounter] = useState(0);
 
   // const incrisedBy = (value: number) => setCounter(prev => Math.max(prev + value, 0))
@@ -26,7 +25,7 @@ export const ProductCard = ({ children, product }: ProductCardProps) => {
       increaseBy,
       product
     }}>
-      <div className={styles.productCard}>
+      <div className={`${styles.productCard} ${className}`} style={style}>
         {children}
       </div>
     </Provider>
